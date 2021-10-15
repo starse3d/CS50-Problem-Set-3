@@ -67,17 +67,13 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO Count Votes
-    int n = 0;
+    int i = 0;
 
-    for(int votes = 0; candidates[n].name == name; n++)
+    for(int n = 0; n < candidate_count; n++)
         {
-        if(true)
-            ++candidates[n].votes;
+        if(candidates[i].name == name)
+            candidates[n].votes++;
     return 1;
-
-        else
-
-    return 0;
         }
 }
 
@@ -85,11 +81,23 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO Calculate Counts
+    int most_votes = 0;
+    int n = 0;
 
+    while(n < candidate_count)
     {
-
+        if(most_votes < candidates[n].votes)
+            most_votes = candidates[n].votes;
+    }
+            n++;
+    {
+    for(int n = 0; n < candidate_count; n++)
+        if(candidates[n].votes == most_votes)
+        printf(%s\n, candidates[i].name);
     }
 
-    return;
 }
+
+    return;
+
 
